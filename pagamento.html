@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raízes do Nordeste | Pagamento</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/utils.css">
+    <link rel="stylesheet" href="css/cardapio.css">
+    <link rel="stylesheet" href="css/cart-orders.css">
+    <link rel="stylesheet" href="css/panel.css">
+</head>
+<body>
+
+<header>
+    <h1>🌵 Raízes do Nordeste</h1>
+    <nav>
+        <a href="index.html">🏠 Início</a>         
+        <a href="cardapio.html">🍲 Cardápio</a>         
+        <a href="fidelidade.html">🌟 Clube</a>         
+        <a href="pedidos.html">📦 Pedidos</a>       
+        <a href="carrinho.html">🛒 Carrinho</a> 
+    </nav>
+</header>
+
+<div class="container">
+    <h2>Pagamento</h2>
+
+    <p>Total do pedido:</p>
+    <h3 id="totalPagamento">R$ 0</h3>
+
+    <div id="areaDesconto" style="display: none; margin-bottom: 20px; padding: 15px; background: #f1f1f1; border-radius: 8px;">
+        <p style="margin-top: 0;">Você tem <strong id="qtdPontosDisplay">0</strong> pontos no Clube Raízes.</p>
+        <button id="btnUsarPontos" class="btn-voltar" style="margin-bottom: 0;">Usar Pontos</button>
+    </div>
+
+    <div style="margin-top: 20px;">
+        <label for="metodoPgto"><strong>💳 Forma de Pagamento:</strong></label>
+        <select id="metodoPgto" onchange="alternarMetodoPagamento()" style="width: 100%; padding: 10px; margin-top: 8px; border-radius: 6px; border: 1px solid #ccc; font-size: 1rem; background-color: #fff;">
+            <option value="pix">Pix (Aprovação imediata)</option>
+            <option value="cartao">Cartão de Crédito</option>
+        </select>
+    </div>
+
+    <div id="areaPix" style="margin-top: 20px; padding: 15px; background: #eafaf1; border: 1px solid #2ecc71; border-radius: 8px; text-align: center;">
+        <p style="margin: 0 0 10px 0; color: #27ae60;"><strong>Opção Pix selecionada</strong></p>
+        <p style="font-size: 0.9em; margin: 0;">Ao confirmar, o sistema gerará o QR Code para o pagamento.</p>
+    </div>
+
+    <div id="areaCartao" class="form-auth" style="display: none; margin-top: 20px; padding: 15px; background: #f9f9f9; border: 1px solid #ddd; border-radius: 8px;">
+        <label for="numCartao">Número do Cartão:</label>
+        <input type="text" id="numCartao" placeholder="0000 0000 0000 0000" maxlength="19" value="4111 1111 1111 1111">
+        
+        <label for="nomeCartao">Nome Impresso no Cartão:</label>
+        <input type="text" id="nomeCartao" placeholder="NOME DO TITULAR" value="CLIENTE TESTE">
+        
+        <div style="display: flex; gap: 10px;">
+            <div style="flex: 1; display: flex; flex-direction: column;">
+                <label for="valCartao">Validade:</label>
+                <input type="text" id="valCartao" placeholder="MM/AA" maxlength="5" value="12/29">
+            </div>
+            <div style="flex: 1; display: flex; flex-direction: column;">
+                <label for="cvvCartao">CVV:</label>
+                <input type="text" id="cvvCartao" placeholder="123" maxlength="3" value="123">
+            </div>
+        </div>
+    </div>
+
+    <div style="margin-top: 25px; margin-bottom: 15px; padding-top: 15px; font-size: 0.85em; color: #555; border-top: 1px solid #eee;">
+        <label style="display: flex; align-items: flex-start; gap: 8px; cursor: pointer;">
+            <input type="checkbox" id="aceiteLGPDPgto" style="margin-top: 3px; cursor: pointer;">
+            <span>Li e concordo com a <strong>Política de Privacidade (em acordo com a LGPD)</strong> e autorizo o processamento dos meus dados para a conclusão deste pedido.</span>
+        </label>
+    </div>
+
+    <button class="btn-principal" style="width: 100%;" onclick="processarPagamento()">Confirmar Pagamento</button>
+</div>
+
+<script src="js/utils.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/cart.js"></script>
+<script src="js/orders.js"></script>
+<script src="js/panel.js"></script>
+<script src="js/app.js"></script>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-col">
+                <h4>🌵 Sobre Nós</h4>
+                <p>O autêntico sabor do sertão entregue com rapidez e qualidade. Ingredientes selecionados e muito amor em cada prato.</p>
+            </div>
+            <div class="footer-col">
+                <h4>📍 Nossas Unidades</h4>
+                <p>Recife - PE</p>
+                <p>Salvador - BA</p>
+                <p>Fortaleza - CE</p>
+            </div>
+            <div class="footer-col">
+                <h4>📞 Atendimento</h4>
+                <p>WhatsApp: (81) 99999-9999</p>
+                <p>Email: contato@raizes.com</p>
+            </div>
+            <div class="footer-col">
+                <h4>🕒 Funcionamento</h4>
+                <p>Segunda a Domingo</p>
+                <p>Das 11:00h às 23:00h</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p style="font-size: 0.8rem; color: #aaa; margin: 8px 0; line-height: 1.4;">
+                🔒 <strong>Privacidade e Segurança:</strong> Este sistema processa dados em estrita conformidade com a Lei Geral de Proteção de Dados (LGPD). As informações recolhidas são utilizadas exclusivamente para a autenticação de contas, segurança das operações e processamento logístico dos pedidos.
+            </p>
+            <p>&copy; 2026 Raízes do Nordeste. Todos os direitos reservados.</p>
+            <p style="margin-top: 10px;">Feito com ❤️ para trazer o melhor do sabor nordestino.</p>
+        </div>
+    </footer>
+</body>
+</html>
