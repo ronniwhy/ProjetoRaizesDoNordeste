@@ -1,0 +1,190 @@
+<!DOCTYPE html> 
+<html lang="pt-BR"> 
+<head>     
+    <meta charset="UTF-8">     
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">     
+    <title>Raízes do Nordeste | Cardápio</title>     
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/utils.css">
+    <link rel="stylesheet" href="css/cardapio.css">
+    <link rel="stylesheet" href="css/cart-orders.css">
+    <link rel="stylesheet" href="css/panel.css">
+</head> 
+<body> 
+    <header>     
+        <h1>🌵 Raízes do Nordeste</h1>     
+        <nav>
+        <a href="index.html">🏠 Início</a>         
+        <a href="cardapio.html" class="active">🍲 Cardápio</a>         
+        <a href="fidelidade.html">🌟 Clube</a>         
+        <a href="pedidos.html">📦 Pedidos</a>       
+        <a href="carrinho.html">🛒 Carrinho</a>   
+        </nav> 
+    </header>
+    
+    <div class="container">     
+        <h2>Nosso Cardápio Arretado</h2>     
+        
+        <div class="filial-selector">
+            <label for="unidade">📍 Selecione a filial de retirada:</label>
+            <select id="unidade" onchange="selecionarUnidade()">
+                <option value="todas">Todas as Unidades</option>
+                <option value="recife">Recife - PE</option>
+                <option value="salvador">Salvador - BA</option>
+                <option value="fortaleza">Fortaleza - CE</option>
+            </select>
+        </div>
+
+        <div class="lista-cardapio">
+        <div class="menu-item" data-regiao="recife">
+                <div class="item-info">
+                    <h3>Cuscuz com Carne de Sol</h3>
+                    <p class="desc">Flocão de milho cozido no vapor, recheado com carne de sol desfiada na manteiga de garrafa.</p>
+                    <span class="badge-unidade">📍 Recife | Filial 301</span>
+                    <span class="preco">R$ 18,00</span>
+                </div>
+                
+                <div class="botoes-acao">
+                    <img src="img/cuscuz-com-carne-de-sol-630x473.jpg" alt="Cuscuz com Carne de Sol" class="img-prato-botoes">
+                    
+                    <button class="btn-add" onclick="adicionarAoCarrinho('Cuscuz com Carne de Sol', 18)">+ Adicionar Ao Carrinho</button>
+                    <button class="btn-comprar" onclick="comprarAgora('Cuscuz com Carne de Sol', 18)">Comprar</button>
+                </div>
+            </div>
+            <div class="menu-item" data-regiao="fortaleza">
+                <div class="item-info">
+                    <h3>Cuscuz com Carne de Sol</h3>
+                    <p class="desc">Flocão de milho cozido no vapor, recheado com carne de sol desfiada na manteiga de garrafa.</p>
+                    <span class="badge-unidade">📍 Fortaleza | Filial 200</span>
+                    <span class="preco">R$ 18,00</span>
+                </div>
+                <div class="botoes-acao">
+                    <img src="img/cuscuz-com-carne-de-sol-630x473.jpg" alt="Cuscuz com Carne de Sol" class="img-prato-botoes">
+                    <button class="btn-add" onclick="adicionarAoCarrinho('Cuscuz com Carne de Sol', 18)">+ Adicionar Ao Carrinho</button>
+                    <button class="btn-comprar" onclick="comprarAgora('Cuscuz com Carne de Sol', 18)">Comprar</button>
+                </div>
+            </div>    
+            <div class="menu-item" data-regiao="recife">
+                <div class="item-info">
+                    <h3>Tapioca de Queijo Coalho</h3>
+                    <p class="desc">Goma fresca e crocante com generosas fatias de queijo coalho assado.</p>
+                    <span class="badge-unidade">📍 Recife | Filial 301</span>
+                    <span class="preco">R$ 12,00</span>
+                </div>
+                <div class="botoes-acao">
+                    <img src="img/tapioca-de-queijo-coalho-1920x1080.webp" alt="Tapioca de Queijo Coalho" class="img-prato-botoes">
+                    <button class="btn-add" onclick="adicionarAoCarrinho('Tapioca de Queijo Coalho', 12)">+ Adicionar Ao Carrinho</button>
+                    <button class="btn-comprar" onclick="comprarAgora('Tapioca de Queijo Coalho', 12)">Comprar</button>
+                </div>
+            </div>
+            <div class="menu-item" data-regiao="fortaleza">
+                <div class="item-info">
+                    <h3>Tapioca de Queijo Coalho</h3>
+                    <p class="desc">Goma fresca e crocante com generosas fatias de queijo coalho assado.</p>
+                    <span class="badge-unidade">📍 Fortaleza | Filial 200</span>
+                    <span class="preco">R$ 12,00</span>
+                </div>
+                <div class="botoes-acao">
+                    <img src="img/tapioca-de-queijo-coalho-1920x1080.webp" alt="Tapioca de Queijo Coalho" class="img-prato-botoes">
+                    <button class="btn-add" onclick="adicionarAoCarrinho('Tapioca de Queijo Coalho', 12)">+ Adicionar Ao Carrinho</button>
+                    <button class="btn-comprar" onclick="comprarAgora('Tapioca de Queijo Coalho', 12)">Comprar</button>
+                </div>
+            </div>
+            <div class="menu-item" data-regiao="salvador">
+                <div class="item-info">
+                    <h3>Tapioca de Queijo Coalho</h3>
+                    <p class="desc">Goma fresca e crocante com generosas fatias de queijo coalho assado.</p>
+                    <span class="badge-unidade">📍 Salvador | Filial 291</span>
+                    <span class="preco">R$ 12,00</span>
+                </div>
+                <div class="botoes-acao">
+                    <img src="img/tapioca-de-queijo-coalho-1920x1080.webp" alt="Tapioca de Queijo Coalho" class="img-prato-botoes">
+                    <button class="btn-add" onclick="adicionarAoCarrinho('Tapioca de Queijo Coalho', 12)">+ Adicionar Ao Carrinho</button>
+                    <button class="btn-comprar" onclick="comprarAgora('Tapioca de Queijo Coalho', 12)">Comprar</button>
+                </div>
+            </div>      
+
+            <div class="menu-item" data-regiao="salvador">
+                <div class="item-info">
+                    <h3>Acarajé Completo <span class="badge-promocao">Promoção por tempo limitado</span></h3>
+                    <p class="desc">Bolinho de feijão-fradinho frito no azeite de dendê, com vatapá, caruru e camarão seco.</p>
+                    <span class="badge-unidade">📍 Salvador - Filial 291</span>
+                    <span class="preco"><strike style="color: #999; font-size: 0.85em;">R$ 22,00</strike> R$ 19,00</span>
+                </div>
+                <div class="botoes-acao">
+                    <img src="img/acaraje-completo-984x667.webp" alt="Acarajé Completo" class="img-prato-botoes">
+                    <button class="btn-add" onclick="adicionarAoCarrinho('Acarajé Completo', 19)">+ Adicionar Ao Carrinho</button>
+                    <button class="btn-comprar" onclick="comprarAgora('Acarajé Completo', 19)">Comprar</button>
+                </div>
+            </div>     
+
+            <div class="menu-item" data-regiao="recife">
+                <div class="item-info">
+                    <h3>Suco de Cajá (500ml)</h3>
+                    <p class="desc">Suco natural da polpa do cajá, refrescante e azedinho na medida certa.</p>
+                    <span class="badge-unidade">📍 Recife | Filial 301</span>
+                    <span class="preco">R$ 8,00</span>
+                </div>
+                <div class="botoes-acao">
+                    <img src="img/suco-de-caja-1168x784.webp" alt="Suco de Cajá" class="img-prato-botoes">
+                    <button class="btn-add" onclick="adicionarAoCarrinho('Suco de Cajá', 8)">+ Adicionar Ao Carrinho</button>
+                    <button class="btn-comprar" onclick="comprarAgora('Suco de Cajá', 8)">Comprar</button>
+                </div>
+            </div>
+            <div class="menu-item" data-regiao="fortaleza">
+                <div class="item-info">
+                    <h3>Suco de Cajá (500ml)</h3>
+                    <p class="desc">Suco natural da polpa do cajá, refrescante e azedinho na medida certa.</p>
+                    <span class="badge-unidade">📍 Fortaleza | Filial 200</span>
+                    <span class="preco">R$ 8,00</span>
+                </div>
+                <div class="botoes-acao">
+                    <img src="img/suco-de-caja-1168x784.webp" alt="Suco de Cajá" class="img-prato-botoes">
+                    <button class="btn-add" onclick="adicionarAoCarrinho('Suco de Cajá', 8)">+ Adicionar Ao Carrinho</button>
+                    <button class="btn-comprar" onclick="comprarAgora('Suco de Cajá', 8)">Comprar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="js/utils.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/orders.js"></script>
+    <script src="js/panel.js"></script>
+    <script src="js/app.js"></script>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-col">
+                <h4>🌵 Sobre Nós</h4>
+                <p>O autêntico sabor do sertão entregue com rapidez e qualidade. Ingredientes selecionados e muito amor em cada prato.</p>
+            </div>
+            <div class="footer-col">
+                <h4>📍 Nossas Unidades</h4>
+                <p>Recife - PE</p>
+                <p>Salvador - BA</p>
+                <p>Fortaleza - CE</p>
+            </div>
+            <div class="footer-col">
+                <h4>📞 Atendimento</h4>
+                <p>WhatsApp: (81) 99999-9999</p>
+                <p>Email: contato@raizes.com</p>
+            </div>
+            <div class="footer-col">
+                <h4>🕒 Funcionamento</h4>
+                <p>Segunda a Domingo</p>
+                <p>Das 11:00h às 23:00h</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p style="font-size: 0.8rem; color: #aaa; margin: 8px 0; line-height: 1.4;">
+                🔒 <strong>Privacidade e Segurança:</strong> Este sistema processa dados em estrita conformidade com a Lei Geral de Proteção de Dados (LGPD). As informações recolhidas são utilizadas exclusivamente para a autenticação de contas, segurança das operações e processamento logístico dos pedidos.
+            </p>
+            <p>&copy; 2026 Raízes do Nordeste. Todos os direitos reservados.</p>
+            <p style="margin-top: 10px;">Feito com ❤️ para trazer o melhor do sabor nordestino.</p>
+        </div>
+    </footer>
+</body> 
+</html>
