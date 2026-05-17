@@ -1,0 +1,36 @@
+/**
+ * =========================================
+ * Variáveis e Estrutura Global
+ * =========================================
+ */
+
+:root {
+    --primary: #D35400;
+    --secondary: #F39C12;
+    --light: #ffffff;
+    --dark: #292929;
+    --bg: #FAEDDF;
+    --primary_danger: #E74C3C;
+    --secondary_danger: #c0392b;
+}
+
+/* Reset básico e tipografia */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    background-color: var(--bg);
+    color: var(--dark);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Container Principal */
+.container {
+    max-width: 80%;
+    margin: 2rem auto;
+    background: var(--light);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
