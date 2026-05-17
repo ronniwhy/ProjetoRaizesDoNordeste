@@ -1,0 +1,110 @@
+/**
+ * =========================================
+ * Área de Gestão e Painel Administrativo
+ * =========================================
+ */
+
+/* Botão exclusivo de acesso ao painel (Navegação) */
+.btn-painel {
+    background-color: var(--light);
+    color: var(--primary) !important;
+    border: 2px solid var(--light);
+    border-radius: 20px;
+    padding: 6px 18px !important;
+    font-weight: bold !important;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.btn-painel:hover {
+    background-color: transparent !important;
+    color: var(--light) !important;
+    border-color: var(--light);
+    box-shadow: none;
+}
+
+/* Estrutura do Painel Interno */
+.painel-secao {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    border: 1px solid #e0e0e0;
+}
+
+.painel-secao h3 {
+    margin-top: 0;
+    color: var(--dark);
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 10px;
+}
+
+.painel-item {
+    background: #fff;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.painel-item select {
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.painel-controles {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-wrap: wrap; 
+}
+
+/* Botões do Painel */
+.btn-acao {
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn-acao:hover {
+    background-color: var(--dark);
+}
+
+.btn-perigo {
+    background-color: var(--primary_danger);
+}
+
+.btn-perigo:hover {
+    background-color: var(--secondary_danger);
+}
+
+/* Form de Edição Admin */
+.form-painel {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 15px;
+    padding: 15px;
+    background: #fff;
+    border: 1px dashed #ccc;
+    border-radius: 6px;
+}
+
+.form-painel input, .form-painel select {
+    flex: 1;
+    min-width: 150px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}

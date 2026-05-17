@@ -1,0 +1,118 @@
+/**
+ * =========================================
+ * Botões, Forms e Badges
+ * =========================================
+ */
+
+/* Botões Principais */
+.btn-principal {
+    background-color: var(--secondary);
+    color: var(--light);
+    border: none;
+    padding: 12px 24px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    margin-top: 15px;
+    display: inline-block;
+}
+
+.btn-principal:hover {
+    background-color: var(--primary);
+}
+
+.btn-voltar {
+    background-color: transparent;
+    color: var(--primary);
+    border: 2px solid var(--primary);
+    padding: 8px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-bottom: 20px;
+    transition: 0.3s;
+}
+
+.btn-voltar:hover {
+    background-color: var(--primary);
+    color: var(--light);
+}
+
+/* Formulários (Login, Cadastro, Pagamento) */
+.form-auth {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.form-auth label {
+    font-weight: bold;
+    color: var(--primary);
+}
+
+.form-auth input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    outline: none;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.form-auth input:focus {
+    border-color: var(--secondary);
+}
+
+.form-auth .btn-principal {
+    width: 100%;
+    margin-top: 5px;
+}
+
+.auth-links {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 0.9rem;
+}
+
+.auth-links a {
+    color: var(--secondary);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.auth-links a:hover {
+    text-decoration: underline;
+}
+
+/* Badges e Etiquetas */
+.badge-status {
+    background-color: var(--secondary);
+    color: white;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 0.9em;
+    font-weight: bold;
+}
+
+/* Clube de Fidelidade */
+.cartao-fidelidade {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.pontos {
+    font-size: 3rem;
+    margin: 10px 0;
+}
+
+.info {
+    text-align: center;
+}

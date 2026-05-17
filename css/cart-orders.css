@@ -1,0 +1,74 @@
+/**
+ * =========================================
+ * Carrinho do Cliente
+ * =========================================
+ */
+
+/* Carrinho de Compras */
+#listaCarrinho {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#listaCarrinho li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+    padding: 15px 0;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.controles-carrinho {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #f9f9f9;
+    padding: 5px 10px;
+    border-radius: 8px;
+    border: 1px solid #eee;
+}
+
+.btn-qtd {
+    background-color: white;
+    border: 1px solid #ccc;
+    color: var(--dark);
+    width: 28px;
+    height: 28px;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s;
+}
+
+.btn-qtd:hover {
+    background-color: #e2e2e2;
+}
+
+.btn-remover {
+    background-color: transparent;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 5px;
+    margin-left: 5px;
+    transition: transform 0.2s;
+}
+
+.btn-remover:hover {
+    transform: scale(1.15);
+}
+
+/* Status e Histórico de Pedidos */
+.pedido {
+    border: 1px solid #eee;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}

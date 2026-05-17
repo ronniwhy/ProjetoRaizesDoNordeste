@@ -35,7 +35,6 @@ body {
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
-
 h2 {
     border-bottom: 2px solid var(--secondary);
     padding-bottom: 5px;
@@ -67,6 +66,47 @@ nav {
     align-items: center;
     justify-content: center;
     width: 100%;
+}
+
+nav a {
+    color: var(--light);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 6px 12px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    border-bottom: 2px solid transparent;
+}
+
+nav a:hover {
+    color: var(--secondary);
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+nav a.active {
+    color: var(--secondary);
+    border-bottom: 2px solid var(--secondary);
+    border-radius: 4px 4px 0 0;
+}
+
+/* Rodapé (Footer)*/
+footer {
+    background-color: var(--dark);
+    color: var(--light);
+    padding: 2.5rem 1rem 1rem;
+    margin-top: auto; 
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    max-width: 80%;
+    margin: 0 auto;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .footer-col {
