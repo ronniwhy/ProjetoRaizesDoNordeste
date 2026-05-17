@@ -11,12 +11,14 @@ function selecionarUnidade() {
 }
 
 function filtrarCardapio() {
-    const regiao = document.getElementById("unidade")?.value.toLowerCase();
-    if(!regiao) return;
-
-    document.querySelectorAll(".menu-item").forEach(item => {
-        item.style.display = (regiao === "todas" || item.getAttribute("data-regiao").toLowerCase().includes(regiao.split(" - ")[0])) ? "flex" : "none";
-    });
+  const regiaoSelecionada = document.getElementById("unidade").value;
+  document.querySelectorAll(".menu-item").forEach(item => {
+    if (regiaoSelecionada === "todas" || item.getAttribute("data-regiao") === regiaoSelecionada) {
+      item.style.display = "flex";
+    } else {
+      item.style.display = "none";
+    }
+  });
 }
 
 // --- CLUBE DE FIDELIDADE ---
